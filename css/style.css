@@ -1,0 +1,87 @@
+/*! style.css || v0.1 || City of Asheville || For use on internal webpages only */
+
+body {
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif; /* default fonts for webpage */
+}
+
+/* Header */
+
+header {
+    margin: 1em; /* em is the width of the capital em. allows this to scale better than px */
+    display: block; /* only block elements have height and width */
+    max-height: 10%; /* % is based on the screen size makes sure this will never take up more than 10% */
+
+}
+
+header a {
+    text-decoration: none; /* removes the underline from the page title */
+    display: block;
+}
+
+
+header > a > img.coa-header-logo {
+    display: block;
+    height: 80px;
+    width: auto;
+    text-decoration: none; /* removes the underline from the page title */
+}
+
+
+
+header a > span  { /* The arrows denote direct decendancy*/
+    display: block;
+    font-size: 30px;
+    font-weight: normal;
+    color: #004987;
+    margin-top: -65px;
+    margin-left: 75px;
+}
+
+/* Hover and focus indicators */
+
+a:focus {
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: #4077a5;
+
+}
+
+a:hover {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: blue;
+}
+
+/* main body of the page stuff */
+
+main {
+    width: 80%; /* by default, take up 80% of the screen */
+    margin: 0 auto; /* center the content in the window */
+    padding-top: 2em; /* add some space between the content and the header */
+}
+
+/* Set up the card display. We are going to use the Flexbox model so that this will be automatically responsive without setting a lot of media query breat points. */
+
+section.coa-row-padding {
+    display: flex; /* display things in this container in the flex model */
+    flex-flow: row wrap; /* display them in a row rather than columns */
+    justify-content: center; /* center them in the provided width */
+    align-items: stretch; /* supposedly stretch them to be the same height */
+}
+
+article.coa-half {
+    flex-grow: 1;
+    width: 45%;
+    display: block;
+    max-width: 600px;
+    min-height: 200px;
+    text-align: center;
+    padding: 1em;
+    mid-width:400px;
+}
+
+article a {
+    text-decoration: none; /* removes the underline from the page title */
+    display: block;
+
+}
